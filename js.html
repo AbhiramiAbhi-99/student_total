@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="js.css"/>
+</head>
+<body>
+    <div>
+        <h1 class="head">S3 EXAMINATION RESULT</h1>
+        <form name="form1">
+          <pre><b>DMS  :</b><input type="textbox" name="txt1"><br>
+          <pre><b>DS   :</b><input type="textbox" name="txt2"><br>
+          <pre><b>OOPs :</b><input type="textbox" name="txt3"><br>
+          <pre><b>LSD  :</b><input type="textbox" name="txt4"><br>
+          <pre><b>DE   :</b><input type="textbox" name="txt5"><br>
+          <pre><b>SE   :</b><input type="textbox" name="txt6"><br>
+
+          <input type="button" value="TOTAL" onclick='total()'></pre>
+        </form>
+    </div>
+    <script lang="javascript">
+        var a;
+        var b;
+        var c;
+        var d;
+        var e;
+        var f;
+        var result=0;
+        var avg=0;
+        
+        function total() {
+
+            a=parseInt(form1.txt1.value);
+            b=parseInt(form1.txt2.value);
+            c=parseInt(form1.txt3.value);
+            d=parseInt(form1.txt4.value);
+            e=parseInt(form1.txt5.value);
+            f=parseInt(form1.txt6.value);
+            result=a+b+c+d+e+f;
+            avg=result/6;
+
+            
+        
+        document.write("Total is :" +result+"<br>");
+        document.write("Avg is :"+avg+"<br>");
+
+        if(avg>50)
+        {
+            document.write("Result is :"+"pass"+"<br>");
+    
+        }
+        else{
+            document.write("Result is :"+"Fail"+"<br>");
+        }
+        }
+        
+  
+    </script>
+</body>
+</html>
